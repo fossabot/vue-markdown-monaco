@@ -4,7 +4,17 @@
   "description": "A Vue component for awesome Markdown editing. Built with the Monaco editor.",
   "main": "index.vue",
   "scripts": {
-    "cm": "git-cz"
+    "cm": "git-cz",
+    "lint": "eslint --fix --ext .js,.vue src",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.{js,vue}": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
   },
   "repository": "git@github.com:multi-cell/vue-markdown-monaco.git",
   "author": "Fauzi Kliman <fauzi.kliman@gmail.com>",
@@ -12,7 +22,16 @@
   "private": true,
   "devDependencies": {
     "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^2.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0"
   },
   "config": {
     "commitizen": {
