@@ -1,0 +1,22 @@
+{
+  "name": "vue-markdown-monaco",
+  "version": "0.0.0",
+  "description": "A Vue component for awesome Markdown editing. Built with the Monaco editor.",
+  "main": "index.vue",
+  "scripts": {
+    "cm": "git-cz"
+  },
+  "repository": "git@github.com:multi-cell/vue-markdown-monaco.git",
+  "author": "Fauzi Kliman <fauzi.kliman@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
