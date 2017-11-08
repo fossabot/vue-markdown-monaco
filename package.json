@@ -2,11 +2,12 @@
   "name": "vue-markdown-monaco",
   "version": "0.0.0",
   "description": "A Vue component for awesome Markdown editing. Built with the Monaco editor.",
-  "main": "index.vue",
+  "main": "src/Editor.vue",
   "scripts": {
     "cm": "git-cz",
     "lint": "eslint --fix --ext .js,.vue src",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "lint-staged": {
     "linters": {
@@ -21,6 +22,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@storybook/vue": "^3.2.14",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.10.0",
@@ -29,13 +31,18 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^2.1.0",
+    "eslint-plugin-vue": "^3.13.1",
     "husky": "^0.14.3",
-    "lint-staged": "^4.3.0"
+    "lint-staged": "^4.3.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "vue": "^2.5.3"
   }
 }
